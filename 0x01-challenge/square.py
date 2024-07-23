@@ -15,7 +15,10 @@ class Square():
         self.height = 0
         if len(kwargs) > 0:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if kwargs[key] is None:
+                    pass
+                else:
+                    setattr(self, key, value)
         else:
             return
 
