@@ -3,7 +3,7 @@
 """This script stirves to become a perfect Square calulator """
 
 
-class square():
+class Square():
     """The Square class"""
     def __init__(self, *args, **kwargs):
         """The constructor of the Square class
@@ -16,7 +16,8 @@ class square():
         if len(kwargs) > 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
+        else:
+            return
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.width
@@ -32,7 +33,7 @@ class square():
 
 if __name__ == "__main__":
     """ A runner for the script as long as it's not improted"""
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
