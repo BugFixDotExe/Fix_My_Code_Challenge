@@ -29,7 +29,7 @@ class Square():
 
     def __str__(self):
         """ A string representation of the square """
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.width, self.width)
 
 
 if __name__ == "__main__":
