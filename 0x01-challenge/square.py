@@ -13,11 +13,12 @@ class Square():
         """
         self.width = 0
         self.height = 0
-
-        if 'width' in kwargs and kwargs['width'] is not None:
-            self.width = kwargs['width']
-        if 'height' in kwargs and kwargs['height'] is not None:
-            self.height = kwargs['height']
+        if (len(kwargs) == 0):
+            return
+        for key, value in kwargs.items():
+            if 'width' in kwargs and kwargs['width'] is not None\
+                    and 'height' in kwargs and kwargs['height'] is not None:
+                setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
